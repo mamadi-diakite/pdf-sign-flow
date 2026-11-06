@@ -1,5 +1,3 @@
-using System.Diagnostics.CodeAnalysis;
-
 namespace PdfSignFlow.Domain;
 
 internal static class Guard

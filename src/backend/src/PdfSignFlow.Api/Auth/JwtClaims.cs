@@ -1,5 +1,3 @@
-using System.Security.Claims;
-
 namespace PdfSignFlow.Api.Auth;
 
 public static class JwtClaims

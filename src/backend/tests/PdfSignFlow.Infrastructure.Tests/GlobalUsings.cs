@@ -1,0 +1,9 @@
+global using Microsoft.Data.Sqlite;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.Extensions.DependencyInjection;
+global using PdfSignFlow.Domain;
+global using PdfSignFlow.Infrastructure.Persistence;
+global using PdfSignFlow.Infrastructure.Security;
+global using PdfSignFlow.Infrastructure.Seeding;
+global using PdfSignFlow.Infrastructure.Storage;
+global using Xunit;

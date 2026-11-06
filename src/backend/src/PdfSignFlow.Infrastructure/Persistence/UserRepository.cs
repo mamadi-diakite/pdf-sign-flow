@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using PdfSignFlow.Application.Users;
-using PdfSignFlow.Domain;
-
 namespace PdfSignFlow.Infrastructure.Persistence;
 
 public sealed class UserRepository(PdfSignFlowDbContext db) : IUserRepository

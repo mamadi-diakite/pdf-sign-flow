@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\PdfSignFlow.Api\PdfSignFlow.Api.csproj" />
   </ItemGroup>
 

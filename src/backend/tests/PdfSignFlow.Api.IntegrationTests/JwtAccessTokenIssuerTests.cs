@@ -1,8 +1,3 @@
-using System.Security.Claims;
-using Microsoft.IdentityModel.JsonWebTokens;
-using PdfSignFlow.Api.Auth;
-using PdfSignFlow.Domain;
-
 namespace PdfSignFlow.Api.IntegrationTests;
 
 public sealed class JwtAccessTokenIssuerTests

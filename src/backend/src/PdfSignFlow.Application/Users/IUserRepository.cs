@@ -1,5 +1,3 @@
-using PdfSignFlow.Domain;
-
 namespace PdfSignFlow.Application.Users;
 
 public interface IUserRepository

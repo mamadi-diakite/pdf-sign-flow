@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Authentication.JwtBearer;
-using PdfSignFlow.Api.Auth;
-using PdfSignFlow.Application;
-using PdfSignFlow.Application.Auth;
-using PdfSignFlow.Infrastructure;
-
 var builder = WebApplication.CreateBuilder(args);
 
 var jwtSettings = JwtSettings.FromConfiguration(builder.Configuration, builder.Environment);

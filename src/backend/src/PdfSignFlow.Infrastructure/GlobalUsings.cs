@@ -1,0 +1,16 @@
+global using Microsoft.AspNetCore.Identity;
+global using Microsoft.Data.Sqlite;
+global using Microsoft.EntityFrameworkCore;
+global using Microsoft.EntityFrameworkCore.Metadata.Builders;
+global using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
+global using Microsoft.Extensions.DependencyInjection;
+global using Microsoft.Extensions.DependencyInjection.Extensions;
+global using PdfSignFlow.Application.Requests;
+global using PdfSignFlow.Application.Security;
+global using PdfSignFlow.Application.Storage;
+global using PdfSignFlow.Application.Users;
+global using PdfSignFlow.Domain;
+global using PdfSignFlow.Infrastructure.Persistence;
+global using PdfSignFlow.Infrastructure.Security;
+global using PdfSignFlow.Infrastructure.Seeding;
+global using PdfSignFlow.Infrastructure.Storage;

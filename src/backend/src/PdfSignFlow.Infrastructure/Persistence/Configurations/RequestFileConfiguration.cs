@@ -1,7 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
-using PdfSignFlow.Domain;
-
 namespace PdfSignFlow.Infrastructure.Persistence.Configurations;
 
 internal sealed class RequestFileConfiguration : IEntityTypeConfiguration<RequestFile>

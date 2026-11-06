@@ -1,8 +1,3 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.Hosting;
-using PdfSignFlow.Api.Auth;
-
 namespace PdfSignFlow.Api.IntegrationTests;
 
 public sealed class JwtSettingsTests

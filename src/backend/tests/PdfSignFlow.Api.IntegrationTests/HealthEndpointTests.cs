@@ -1,6 +1,3 @@
-using System.Net;
-using System.Net.Http.Json;
-
 namespace PdfSignFlow.Api.IntegrationTests;
 
 public sealed class HealthEndpointTests(PdfSignFlowApiFactory factory) : IClassFixture<PdfSignFlowApiFactory>

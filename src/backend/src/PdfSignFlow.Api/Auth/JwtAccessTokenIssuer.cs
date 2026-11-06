@@ -1,8 +1,3 @@
-using Microsoft.IdentityModel.JsonWebTokens;
-using Microsoft.IdentityModel.Tokens;
-using PdfSignFlow.Application.Auth;
-using PdfSignFlow.Domain;
-
 namespace PdfSignFlow.Api.Auth;
 
 public sealed class JwtAccessTokenIssuer(JwtSettings settings, TimeProvider timeProvider) : IAccessTokenIssuer

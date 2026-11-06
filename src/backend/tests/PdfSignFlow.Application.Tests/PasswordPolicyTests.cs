@@ -1,5 +1,3 @@
-using PdfSignFlow.Application.Auth;
-
 namespace PdfSignFlow.Application.Tests;
 
 public sealed class PasswordPolicyTests

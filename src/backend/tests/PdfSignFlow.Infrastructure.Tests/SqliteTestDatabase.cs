@@ -1,7 +1,3 @@
-using Microsoft.Data.Sqlite;
-using Microsoft.EntityFrameworkCore;
-using PdfSignFlow.Infrastructure.Persistence;
-
 namespace PdfSignFlow.Infrastructure.Tests;
 
 /// <summary>In-memory SQLite database that lives as long as its connection stays open.</summary>

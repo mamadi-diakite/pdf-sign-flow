@@ -1,0 +1,15 @@
+global using System.Security.Claims;
+global using System.Security.Cryptography;
+global using Microsoft.AspNetCore.Authentication.JwtBearer;
+global using Microsoft.AspNetCore.Authorization;
+global using Microsoft.AspNetCore.Mvc;
+global using Microsoft.IdentityModel.JsonWebTokens;
+global using Microsoft.IdentityModel.Tokens;
+global using PdfSignFlow.Api.Auth;
+global using PdfSignFlow.Application;
+global using PdfSignFlow.Application.Auth;
+global using PdfSignFlow.Application.Contracts.Auth;
+global using PdfSignFlow.Application.Contracts.Requests;
+global using PdfSignFlow.Application.Requests;
+global using PdfSignFlow.Domain;
+global using PdfSignFlow.Infrastructure;

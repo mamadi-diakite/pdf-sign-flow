@@ -12,10 +12,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Using Include="Xunit" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\..\src\PdfSignFlow.Domain\PdfSignFlow.Domain.csproj" />
   </ItemGroup>
 

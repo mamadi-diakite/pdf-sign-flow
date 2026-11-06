@@ -1,8 +1,3 @@
-using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.DependencyInjection;
-using PdfSignFlow.Infrastructure.Persistence;
-using PdfSignFlow.Infrastructure.Seeding;
-
 namespace PdfSignFlow.Api.IntegrationTests;
 
 public sealed class DemoDataStartupTests(DemoDataApiFactory factory) : IClassFixture<DemoDataApiFactory>

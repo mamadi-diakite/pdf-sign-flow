@@ -1,5 +1,3 @@
-using PdfSignFlow.Application.Storage;
-
 namespace PdfSignFlow.Infrastructure.Storage;
 
 /// <summary>Stores each file under a random name in a folder that the web server does not serve.</summary>

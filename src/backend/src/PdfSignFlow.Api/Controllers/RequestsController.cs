@@ -1,9 +1,3 @@
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Mvc;
-using PdfSignFlow.Api.Auth;
-using PdfSignFlow.Application.Contracts.Requests;
-using PdfSignFlow.Application.Requests;
-
 namespace PdfSignFlow.Api.Controllers;
 
 [ApiController]

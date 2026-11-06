@@ -1,5 +1,3 @@
-using PdfSignFlow.Application.Contracts.Auth;
-
 namespace PdfSignFlow.Application.Auth;
 
 public enum ChangePasswordStatus
