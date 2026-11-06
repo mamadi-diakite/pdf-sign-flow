@@ -40,6 +40,17 @@ public sealed class GuardTests
         Assert.Throws<ArgumentException>(() => Guard.Optional("too long", "name", 3));
     }
 
+    [Theory]
+    [InlineData(" Anna.Smith@Example.com ", 100, true)]
+    [InlineData(null, 100, false)]
+    [InlineData("  ", 100, false)]
+    [InlineData("anna@example.com", 10, false)]
+    [InlineData("anna@example", 100, false)]
+    public void Is_email_checks_without_throwing(string? value, int maxLength, bool expected)
+    {
+        Assert.Equal(expected, Guard.IsEmail(value, maxLength));
+    }
+
     [Fact]
     public void Email_is_trimmed_and_lowercased()
     {

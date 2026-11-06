@@ -38,6 +38,36 @@ public sealed class UserTests
         Assert.Equal("passwordHash", error.ParamName);
     }
 
+    [Theory]
+    [InlineData("anna@example.com", true)]
+    [InlineData("anna@", false)]
+    [InlineData(null, false)]
+    public void Is_valid_email_matches_the_constructor_rule(string? email, bool expected)
+    {
+        Assert.Equal(expected, User.IsValidEmail(email));
+    }
+
+    [Fact]
+    public void Change_password_replaces_the_hash()
+    {
+        var user = new User("anna@example.com", "Anna", "old-hash", TestDates.Now);
+
+        user.ChangePassword("new-hash");
+
+        Assert.Equal("new-hash", user.PasswordHash);
+    }
+
+    [Fact]
+    public void Change_password_rejects_a_blank_hash()
+    {
+        var user = new User("anna@example.com", "Anna", "old-hash", TestDates.Now);
+
+        var error = Assert.Throws<ArgumentException>(() => user.ChangePassword(" "));
+
+        Assert.Equal("passwordHash", error.ParamName);
+        Assert.Equal("old-hash", user.PasswordHash);
+    }
+
     [Fact]
     public void Rejects_non_utc_creation_date()
     {

@@ -41,6 +41,23 @@ public sealed class DependencyInjectionTests
         }
     }
 
+    [Fact]
+    public async Task Seeds_demo_data_once_through_the_service_provider()
+    {
+        await using var provider = new ServiceCollection()
+            .AddInfrastructure("Data Source=seed-test;Mode=Memory;Cache=Shared")
+            .BuildServiceProvider();
+
+        // Keeps the shared in-memory database alive between scopes.
+        await using var keepAlive = new SqliteConnection("Data Source=seed-test;Mode=Memory;Cache=Shared");
+        await keepAlive.OpenAsync();
+
+        await provider.ApplyMigrationsAsync();
+
+        Assert.True(await provider.SeedDemoDataAsync());
+        Assert.False(await provider.SeedDemoDataAsync());
+    }
+
     [Theory]
     [InlineData("Data Source=:memory:")]
     [InlineData("Data Source=in-memory-test;Mode=Memory;Cache=Shared")]
