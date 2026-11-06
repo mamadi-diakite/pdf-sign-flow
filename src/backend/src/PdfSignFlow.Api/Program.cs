@@ -12,7 +12,8 @@ builder.Services.AddControllers();
 builder.Services.AddApplication();
 builder.Services.AddInfrastructure(
     builder.Configuration.GetConnectionString("Default")
-    ?? throw new InvalidOperationException("Connection string 'Default' is missing."));
+    ?? throw new InvalidOperationException("Connection string 'Default' is missing."),
+    builder.Configuration["Storage:RootPath"] ?? PdfSignFlow.Infrastructure.DependencyInjection.DefaultStorageRootPath);
 
 builder.Services.AddSingleton(jwtSettings);
 builder.Services.AddSingleton<IAccessTokenIssuer, JwtAccessTokenIssuer>();

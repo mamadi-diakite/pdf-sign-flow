@@ -2,24 +2,34 @@ using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.DependencyInjection.Extensions;
+using PdfSignFlow.Application.Requests;
 using PdfSignFlow.Application.Security;
+using PdfSignFlow.Application.Storage;
 using PdfSignFlow.Application.Users;
 using PdfSignFlow.Infrastructure.Persistence;
 using PdfSignFlow.Infrastructure.Security;
 using PdfSignFlow.Infrastructure.Seeding;
+using PdfSignFlow.Infrastructure.Storage;
 
 namespace PdfSignFlow.Infrastructure;
 
 public static class DependencyInjection
 {
-    public static IServiceCollection AddInfrastructure(this IServiceCollection services, string connectionString)
+    public const string DefaultStorageRootPath = "App_Data/files";
+
+    public static IServiceCollection AddInfrastructure(
+        this IServiceCollection services,
+        string connectionString,
+        string storageRootPath = DefaultStorageRootPath)
     {
         ArgumentException.ThrowIfNullOrWhiteSpace(connectionString);
 
         services.AddDbContext<PdfSignFlowDbContext>(options => options.UseSqlite(connectionString));
         services.TryAddSingleton(TimeProvider.System);
         services.AddSingleton<IPasswordHasher, IdentityPasswordHasher>();
+        services.AddSingleton<IFileStorage>(new LocalFileStorage(storageRootPath));
         services.AddScoped<IUserRepository, UserRepository>();
+        services.AddScoped<ISignatureRequestRepository, SignatureRequestRepository>();
         services.AddScoped<DemoDataSeeder>();
 
         return services;
