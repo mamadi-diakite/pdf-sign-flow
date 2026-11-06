@@ -9,5 +9,7 @@
   <Folder Name="/tests/">
     <Project Path="tests/PdfSignFlow.Api.IntegrationTests/PdfSignFlow.Api.IntegrationTests.csproj" />
     <Project Path="tests/PdfSignFlow.Application.Tests/PdfSignFlow.Application.Tests.csproj" />
+    <Project Path="tests/PdfSignFlow.Domain.Tests/PdfSignFlow.Domain.Tests.csproj" />
+    <Project Path="tests/PdfSignFlow.Infrastructure.Tests/PdfSignFlow.Infrastructure.Tests.csproj" />
   </Folder>
 </Solution>
