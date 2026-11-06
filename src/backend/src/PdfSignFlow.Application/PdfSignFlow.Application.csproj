@@ -1,0 +1,8 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <ProjectReference Include="..\PdfSignFlow.Application.Contracts\PdfSignFlow.Application.Contracts.csproj" />
+    <ProjectReference Include="..\PdfSignFlow.Domain\PdfSignFlow.Domain.csproj" />
+  </ItemGroup>
+
+</Project>

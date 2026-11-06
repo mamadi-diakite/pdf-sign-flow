@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/PdfSignFlow.Api/PdfSignFlow.Api.csproj" />
+    <Project Path="src/PdfSignFlow.Application.Contracts/PdfSignFlow.Application.Contracts.csproj" />
+    <Project Path="src/PdfSignFlow.Application/PdfSignFlow.Application.csproj" />
+    <Project Path="src/PdfSignFlow.Domain/PdfSignFlow.Domain.csproj" />
+    <Project Path="src/PdfSignFlow.Infrastructure/PdfSignFlow.Infrastructure.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/PdfSignFlow.Api.IntegrationTests/PdfSignFlow.Api.IntegrationTests.csproj" />
+    <Project Path="tests/PdfSignFlow.Application.Tests/PdfSignFlow.Application.Tests.csproj" />
+  </Folder>
+</Solution>
